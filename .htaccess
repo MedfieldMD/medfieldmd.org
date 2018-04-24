@@ -1,0 +1,13 @@
+## SITE REFERRER BANNING
+RewriteCond %{HTTP_REFERER} semalt\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} buttons-for-website\.com [NC,OR]
+RewriteCond %{HTTP_REFERER} seoanalyses\.com [NC]
+RewriteRule .* - [F]
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+ErrorDocument 404 /404.html
+</IfModule>
+
